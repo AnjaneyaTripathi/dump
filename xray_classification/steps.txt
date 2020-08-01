@@ -1,0 +1,8 @@
+download the dataset from the link below:
+
+https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
+
+and set it up in the same directory as this python script ie.
+
+/xray_classification/(dataset_file)
+/xray_classification/classifier.py

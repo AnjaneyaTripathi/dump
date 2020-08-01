@@ -1,0 +1,1 @@
+this python script is ready to run, download the essential libraries prior to testing and working on it
