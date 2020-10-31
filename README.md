@@ -8,4 +8,4 @@ This contains a list of projects that I have done releated to ML, DL and NLP.
 - **Titanic (Kaggle):** A python script that works on the Titanic dataset available on Kaggle.
 - **MNIST Classifier:** This project identifies the correct number from a pool of handwritten numbers. Can be extended to the fashion - MNIST dataset too.
 - **Pneumonia Detector:** Given an X-Ray of the lung section, the model can classify whether the patient suffers from pneumonia or not.
-- **Neural Network (Scratch):** Creating a neural network from scratch
+- **Neural Network (Scratch):** Creating a neural network from scratch.
