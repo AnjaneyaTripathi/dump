@@ -1,0 +1,17 @@
+<% include partials/header %>
+
+<div class="box">
+	<img src="/logo.png">
+	<h3>Register</h3>
+	<form method="POST" action="/register">
+		<input type="text" name="username" placeholder="Username">
+		<br>
+		<input type="password" name="password" placeholder="Password">
+		<br>
+		<input type="password" name="cpassword" placeholder="Confirm Password" class="form-control">
+		<br>
+		<button>Sign Me Up!</button>
+	</form>
+</div>
+
+<% include partials/footer %>

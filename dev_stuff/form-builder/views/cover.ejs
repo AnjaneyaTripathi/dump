@@ -1,0 +1,16 @@
+<% include partials/header %>
+
+<div class="box">
+	<img src="/logo.png">
+	<h3>Login</h3>
+	<form method="POST" action="/login">
+		<input type="text" name="username" placeholder="Username" class="form-control">
+		<br>
+		<input type="password" name="password" placeholder="Password" class="form-control">
+		<br>
+		<button>Log Me In!</button>
+	</form>
+	<p>Don't have an account? <button onclick="location.href='/register'" type="button">Sign Me Up!</button></p>
+</div>
+
+<% include partials/footer %>

@@ -1,0 +1,48 @@
+<% include partials/header %>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<div class="container-fluid">
+		<div class="navbar-header mr-auto">
+			<a class="navbar-brand" href="/home"><h5>Entertainment Point!</h5></a>
+		</div>
+		<div class="misc">
+			<ul class="nav navbar-nav navbar-right">
+				<li onclick="location.href='/profile'">Welcome <%= user.username %>!</li>
+				<li><span id="hidden">hide</span></li>
+				<li><a href="/logout">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="content">
+	<div class="row">
+		<div class="col-lg-4">
+			<img class="movies" src="<%= movie["Poster"] %>">
+			<hr>
+			<p>
+				<span class="actions"><i class="material-icons" onclick="location.href='done/<%= movie["imdbID"] %>/<%= movie["Title"] %>'">done</i></span>
+				<span class="actions"><i class="material-icons" onclick="location.href='favorites/<%= movie["imdbID"] %>/<%= movie["Title"] %>'">favorite_border</i></span>
+				<span class="actions"><i class="material-icons" onclick="location.href='later/<%= movie["imdbID"] %>/<%= movie["Title"] %>'">watch_later</i></span>
+			</p>
+		</div>
+		<div class="col-lg-8">
+			<h1><%= movie["Title"] %></h1>
+			<h4>Synopsis</h4>
+			<p><%= movie["Plot"] %></p>
+			<br>
+			<h4>Cast</h4>
+			<p><%= movie["Actors"] %></p>
+			<br>
+		</div>
+	</div>
+</div>
+
+<div class="content">
+	<h2 class="trailerHead">Watch the Trailer!</h2>
+	<div class="trailer">
+		<iframe id="frame" src="https://www.youtube.com/embed/<%= trailerId %>"></iframe>
+	<div>
+</div>
+
+<% include partials/footer %>

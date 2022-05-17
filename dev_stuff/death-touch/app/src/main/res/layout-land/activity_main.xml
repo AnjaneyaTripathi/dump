@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/homebrick">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/amatic_sc_bold"
+            android:padding="10dp"
+            android:text="UGH! The worst part, when will they die?"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:inputType="number|numberDecimal"
+            android:layout_gravity="center"
+            android:width="50dp"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/white"
+            android:id="@+id/age"
+            android:textColorHint="@android:color/white"
+            android:fontFamily="@font/amatic_sc_bold"
+            android:background="@drawable/round_edittext"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let the Games Begin!"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:onClick="proceed"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/amatic_sc_bold"
+        android:background="@drawable/round_button"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/amatic_sc_bold"
+            android:padding="10dp"
+            android:text="Wins"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/amatic_sc_bold"
+            android:padding="10dp"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="25dp"
+            android:id="@+id/wins"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/amatic_sc_bold"
+            android:padding="4dp"
+            android:text="Losses"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/amatic_sc_bold"
+            android:padding="4dp"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="25dp"
+            android:id="@+id/loss"/>
+
+    </LinearLayout>
+
+</LinearLayout>

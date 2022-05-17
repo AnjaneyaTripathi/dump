@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:onClick="changeGravity"
+    android:background="@drawable/space">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate"
+        android:id="@+id/generateRandom"
+        android:onClick="generateRandom"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap the Screen to Change the Gravity"
+        android:textColor="#C0C0C0"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/orange"
+        android:id="@+id/image0"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/blue"
+        android:id="@+id/image1"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/green"
+        android:id="@+id/image2"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/red"
+        android:visibility="invisible"/>
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/yellow"
+        android:id="@+id/image4"
+        android:visibility="invisible"/>
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/purple"
+        android:id="@+id/image5"
+        android:visibility="invisible"/>
+
+
+</LinearLayout>

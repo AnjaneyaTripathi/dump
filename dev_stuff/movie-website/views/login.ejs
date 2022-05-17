@@ -1,0 +1,21 @@
+<% include partials/header %>
+
+<div class="box">
+	<h1>Entertainment Point!</h1>
+	<br> 
+	<div class="container">
+		<h4>Login</h4>
+		<br>
+		<form action="/login" method="POST">
+			<input type="text" name="username" placeholder="Username" class="form-group" id="login" required>
+			<br>
+			<input type="password" name="password" placeholder="Password" class="form-group" id="login" required>
+			<br>
+			<button id="login">Login</button>
+		</form>
+		<br>
+		<p><a href="/register">Click Here</a> to Sign Up</p>
+	</div>
+</div>
+
+<% include partials/footer %>

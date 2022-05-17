@@ -1,0 +1,13 @@
+<% include partials/header %>
+
+<div class="box">
+	<form action="/formdetails" method="POST">
+		<h3>Title of the form?</h3>
+		<input type="text" name="title" placeholder="Title" required>
+		<h3>What is the purpose of the form?</h3>
+		<input type="text" name="description" placeholder="Description" required>
+		<button>Proceed to Add Questions</button>
+	</form>
+</div>
+
+<% include partials/footer %>

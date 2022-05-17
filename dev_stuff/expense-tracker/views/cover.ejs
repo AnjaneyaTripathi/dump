@@ -1,0 +1,33 @@
+<% include partials/header %>
+
+<div class="container">
+	<h2>Welcome to the Personal Tracker Web App!</h2>
+	<div class="row" style="padding: 10%">
+		<div class="col col-sm-12 col-md-6">
+			<div>
+				<h4>Login</h4>
+				<form method="POST" action="/login" style="margin-top: 5%">
+					<input type="text" name="username" placeholder="Username" class="form-control">
+					<br>
+					<input type="password" name="password" placeholder="Password" class="form-control">
+					<br>
+					<button class="btn btn-lg btn-default">Log Me In!</button>
+				</form>
+			</div>
+		</div>
+		<div class="col col-sm-12 col-md-6">
+			<div>
+				<h4>Register</h4>
+				<form method="POST" action="/register" style="margin-top: 5%">
+					<input type="text" name="username" placeholder="Username" class="form-control">
+					<br>
+					<input type="password" name="password" placeholder="Password" class="form-control">
+					<br>
+					<button class="btn btn-lg btn-default" class="form-control">Sign Me Up!</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include partials/footer %>

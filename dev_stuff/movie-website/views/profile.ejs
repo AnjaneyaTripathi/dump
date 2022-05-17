@@ -1,0 +1,50 @@
+<% include partials/header %>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-custom">
+	<div class="container-fluid">
+		<div class="navbar-header mr-auto">
+			<a class="navbar-brand" href="/home"><h5>Entertainment Point!</h5></a>
+		</div>
+		<div class="misc">
+			<ul class="nav navbar-nav navbar-right">
+				<li onclick="location.href='/profile'">Welcome <%= user.username %>!</li>
+				<li><span id="hidden">hide</span></li>
+				<li><a href="/logout">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+
+<div class="content">
+	<h1>Welcome to Entertainment Point <%= user.username %>!</h1>
+	<div class="row">
+		<div class="col-md-4">
+			<h5>Favorites</h5>
+			<ul>
+				<% user.favorites.forEach(function(movies) { %>
+					<li><%= movies %></li>
+				<% }); %>
+			</ul>
+		</div>
+		<div class="col-md-4">
+			<h5>Watch List</h5>
+			<ul>
+				<% user.toWatch.forEach(function(movies) { %>
+					<li><%= movies %></li>
+				<% }); %>
+			</ul>
+		</div>
+		<div class="col-md-4">
+			<h5>Watched</h5>
+			<ul>
+				<% user.watched.forEach(function(movies) { %>
+					<li><%= movies %></li>
+				<% }); %>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<% include partials/footer %>

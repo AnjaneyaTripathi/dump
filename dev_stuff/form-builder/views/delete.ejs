@@ -1,0 +1,11 @@
+<% include partials/header %>
+
+<div class="box">
+	<h3>Delete Forms</h3>
+	<p>Click on a form to delete it</p>
+	<% f.forEach(function(forms) { %>
+		<p><img src="/form.png" id="formpic" onclick="location.href='/form/delete/<%= forms._id %>'"><br><%= forms.title %></p>
+	<% }); %>
+</div>
+
+<% include partials/footer %>

@@ -1,0 +1,24 @@
+<% include partials/header %>
+
+<div class="box">
+	<% var i = 0; %>
+	<form action="/form/<%= formId %>" method="POST">
+		<% f.forEach(function(form) { %>
+			<% if(form._id == formId) { %>
+				<h3><%= form.title %></h3>
+				<h5><%= form.description %></h5>
+			<% } %>
+		<% }); %>
+		<% q.forEach(function(question) { %>
+			<% if(question.formId == formId) { %>
+				<% i++ %>
+				<p><%= question.question %></p>
+				<input type="<%= question.qType %>" placeholder="Answer <%= i %>"required name="answer<% i %>">
+			<% } %>
+		<% }); %>
+		<br>
+		<button>Submit Responses</button>
+	</form>
+</div> 
+
+<% include partials/footer %>

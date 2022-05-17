@@ -1,0 +1,28 @@
+<% include partials/header %>
+
+<div class="box">
+	<hr>
+	<% var i = -1; %>
+	<% f.forEach(function(forms) { %>
+		<% if(forms._id == id) { %>
+			<h3><%= forms.title %></h5>
+			<h5><%= forms.description %></h5>
+			<hr>
+		<% } %>
+	<% }); %>
+	<% q.forEach(function(questions) { %>
+		<% if(questions.formId == id) { %>
+			<% i++ %>
+			<p><%= questions.question %></p>
+			<% a.forEach(function(answers) { %>
+				<% if(answers.formId == id) { %>
+					<p id="answers"><%= answers.answer[i] %></p>
+				<% } %>
+			<% }); %>
+			<hr>
+		<% } %>
+	<% }); %>
+</div>
+
+<% include partials/footer %>
+

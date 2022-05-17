@@ -1,0 +1,43 @@
+<% include partials/header %>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<div class="container-fluid">
+		<div class="navbar-header mr-auto">
+			<a class="navbar-brand" href="/home"><h5>Entertainment Point!</h5></a>
+		</div>
+		<div class="misc">
+			<ul class="nav navbar-nav navbar-right">
+				<li onclick="location.href='/profile'">Welcome <%= user.username %>!</li>
+				<li><span id="hidden">hide</span></li>
+				<li><a href="/logout">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="content">
+	<h2 id="heading">Search for Your Favorite Movies and TV Shows</h2>
+	<form action="/home" method="POST">
+		<input type="text" name="name" placeholder="Movie, TV Show, Anime etc." id="search" class="form-group">
+		<input type="text" name="omdbId" placeholder="OMDb ID" id="search" class="form-group">
+		<button id="search">Search</button>
+	</form>
+	<br>
+	<hr>
+	<h4>Showing result(s) for "<%= name %>"</h4>
+	<br>
+	<div class="row">
+		<% results["Search"].forEach(function(movie) { %>
+			<div class="col-lg-4 col-md-6" id="movie">
+				<div id="poster" onclick="location.href='/results/show/<%= movie["imdbID"] %>'">
+					<img src="<%= movie["Poster"] %>">
+					<div>
+						<p><%= movie["Title"] %></p>
+					</div>
+				</div>
+			</div>
+		<% }); %>
+	</div>
+</div>
+
+<% include partials/footer %>

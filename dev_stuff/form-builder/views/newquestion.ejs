@@ -1,0 +1,15 @@
+<% include partials/header %>
+
+<div class="box">
+	<h3>Add a Question</h3>
+	<form method="POST" action="/form/question/<%= formId %>">
+		<input type="text" name="question" placeholder="Enter the Question" required>
+		<div id="inputs">
+			<input id="radio" type="radio" name="qType" value="text" required>Text Answer<br>
+			<input id="radio" type="radio" name="qType" value="number" required>Numerical Answer<br>
+		</div>
+		<button>Done</button>
+	</form>
+<div>
+
+<% include partials/footer %>

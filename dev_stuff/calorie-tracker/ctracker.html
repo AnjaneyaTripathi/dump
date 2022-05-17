@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Calorie Tracker</title>
+	<link rel="stylesheet" type="text/css" href="ctracker.css">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One|Special+Elite&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Know What You Eat, Track It With Us!</h1>
+		<!-- calculates required calories based on height, weight, age and gender -->
+		<p>Calculate your calorie intake based on Harris-Benedict Equation!</p>
+		<hr>
+		<p id="buttons">
+			<button id="enterDetails" style="display: inline-block;">Let's Go</button>
+			<button id="clear" style="display: inline-block;">Start Again</button>
+		</p>
+		<hr>
+		<div class="reqcal" id="reqcal">
+			<form id="calculator" name="calculator">
+				<p>Age
+				<input type="number" name="age" id="age" min="0" style="margin-left: 45px">
+				</p>
+				<p>Gender
+				<input type="radio" name="gender" id="male" value="male"> Male
+				<input type="radio" name="gender" id="female" value="female"> Female
+			    </p>
+				<p>Height
+				<input type="number" name="height" id="height" min="0">
+				</p>
+				<p>Weight
+				<input type="number" name="weight" id="weight" min="0">
+				</p>
+				<br>
+				<p>Lifestyle
+					<select name="lifestyle" id="lifestyle">
+					  <option value="1.2">Sedentary</option>
+					  <option value="1.375">Light Exercise</option>
+					  <option value="1.55">Moderate Exercise</option>
+					  <option value="1.725">Hard Exercise</option>
+					  <option value="1.9">Professional Exercise</option>
+					</select>
+				</p>
+				<br>
+				<button id="data" type="button"><a href="ctracker.html">Calculate</a></button>
+			</form>
+			<hr>
+		</div>
+		<!-- displaying required calories -->
+		<div id="requirements">
+			<p id="notify"></p>
+		</div>
+		<!-- hydration text -->
+		<hr>
+		<p>Click on each letter for every glass of water!</p>
+		<p id="hydration">
+			<span id="blue1">H</span>-
+			<span id="blue2">Y</span>-
+			<span id="blue3">D</span>-
+			<span id="blue4">R</span>-
+			<span id="blue5">A</span>-
+			<span id="blue6">T</span>-
+			<span id="blue7">E</span>-
+			<span id="blue8">D</span>
+		</p>
+		<!-- form to input food item and calories -->
+		<hr>
+		<div class="addfood">
+			<form id="items">
+				<p>Food Item
+					<input type="name" name="food" id="name" class="foodinput">
+				</p>
+				<p>Calories
+					<input type="number" name="calories" id="cal" min="0" class="foodinput">
+				</p>
+				<p>*Fat
+					<input type="number" name="fat" min="0" class="foodinput">
+				</p>
+				<p>*Protein
+					<input type="number" name="protein" min="0" class="foodinput">
+				</p>
+				<p>*Carbohydrate
+					<input type="number" name="carbs" min="0" class="foodinput">
+				</p>
+				<br>
+				<p id="buttons"><button id="add" type="button">Add Food Item</button></p>
+			</form>
+		</div>
+		<!-- dialogue box that informs about calorie intake etc. -->
+		<hr>
+		<div class="dialoguebox" id="dialoguebox">
+			<p id="message"></p>
+		</div>
+		<!-- table that stores food items eaten along with calories -->
+		<hr>
+		<p>Food Eaten for The Day</p>
+		<p id="note">(Click on the calories to remove an item from the list!)</p>
+		<div class="foodchart" id="foodchart">
+			<ul id="foodlist"></ul>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="ctracker1.js"></script>
+
+</html>

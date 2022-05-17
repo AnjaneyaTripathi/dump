@@ -1,0 +1,171 @@
+@media only screen and (max-width: 600px) {
+	body {
+		background-image: url("offwhite.jpg");
+		background-size: cover;
+	}
+	/*outer container*/
+	.container {
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: 5%;
+		padding: 10px;
+		position: absolute;
+		font-family: 'Special Elite', cursive;
+	}
+	/*dialogue box informing amount of calorie intake*/
+	#dialoguebox {
+		visibility: hidden;
+	}
+	/*class storing the list of food items*/
+	#foodchart {
+		width: 80%;
+	}
+	/*ul storing all the food items*/
+	#foodlist {
+		position: absolute;
+		width: 100%;
+	}
+	/*food names stored as li*/
+	.food {
+		width: 60%;
+		list-style-type: none;
+		position: relative;
+		left: 0;
+		top: 0; 
+		margin: 0;
+		padding-top: 10px;
+	}
+	/*calories of the appended food item*/
+	.foodcalorie {
+		position: absolute;
+		right: 0%;
+		top: 0;
+		color: blue;
+		width: 0%;
+		padding-top: 10px;
+	}
+
+	p {
+		padding-top: 2px;
+	}
+
+	#reqcal {
+		display: none;
+		padding-left: 0px;
+	}
+
+	button {
+		margin: 5px;
+	}
+
+	#note {
+		font-size: 10px;
+		color: green;
+		margin: 0;
+		padding: 0;
+	}
+
+	#calculator {
+		padding-left: 20px;
+	}
+
+	input {
+		margin-left: 10px;
+	}
+
+	#buttons {
+		text-align: center;
+	}
+
+	#hydration {
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	body {
+		background-image: url("table.jpeg");
+		background-size: cover;
+	}
+	/*outer container*/
+	.container {
+		margin-left: 45%;
+		margin-right: 15%;
+		padding: 10px;
+		position: absolute;
+		font-family: 'Special Elite', cursive;
+	}
+	/*dialogue box informing amount of calorie intake*/
+	#dialoguebox {
+		visibility: hidden;
+	}
+	/*class storing the list of food items*/
+	#foodchart {
+		width: 80%;
+	}
+	/*ul storing all the food items*/
+	#foodlist {
+		position: absolute;
+		width: 100%;
+	}
+	/*food names stored as li*/
+	.food {
+		width: 60%;
+		list-style-type: none;
+		position: relative;
+		left: 0;
+		top: 0; 
+		margin: 0;
+		padding-top: 10px;
+	}
+	/*calories of the appended food item*/
+	.foodcalorie {
+		position: absolute;
+		right: 0%;
+		top: 0;
+		color: blue;
+		width: 0%;
+		padding-top: 10px;
+	}
+
+	p {
+		padding: 2px;
+	}
+
+	#reqcal {
+		display: none;
+		padding-left: 0px;
+	}
+
+	button {
+		margin: 5px;
+	}
+
+	#note {
+		font-size: 10px;
+		color: green;
+		margin: 0;
+		padding: 0;
+	}
+
+	#calculator {
+		padding-left: 20px;
+	}
+
+	input {
+		margin-left: 20px;
+	}
+
+	#buttons {
+		text-align: center;
+	}
+
+	#hydration {
+		text-align: center;
+	}
+}
+
+/*font-family: 'Poiret One', cursive;
+font-family: 'Special Elite', cursive;*/
+
+

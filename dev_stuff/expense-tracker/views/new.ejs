@@ -1,0 +1,18 @@
+<% include partials/header %>
+
+<div class="container">
+	<h2>Add Expenses</h2>
+	<form action="/dashboard" method="POST">
+		<input type="text" name="name" placeholder="Product" class="form-control">
+		<br>
+		<input type="number" name="price" placeholder="Price" class="form-control">
+		<br>
+		<input type="text" name="description" placeholder="Briefly describe the item purchased for future reference (eg. who you spent it for)" class="form-control">
+		<br>
+		<div style="text-align: center">
+			<button class="btn btn-lg btn-default">Submit</button>
+		</div>
+	</form>
+</div>
+
+<% include partials/footer %>

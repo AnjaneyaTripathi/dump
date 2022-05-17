@@ -1,0 +1,28 @@
+<% include partials/header %>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<div class="container-fluid">
+		<div class="navbar-header mr-auto">
+			<a class="navbar-brand" href="/home"><h5>Entertainment Point!</h5></a>
+		</div>
+		<div class="misc">
+			<ul class="nav navbar-nav navbar-right">
+				<li onclick="location.href='/profile'">Welcome <%= user.username %>!</li>
+				<li><span id="hidden">hide</span></li>
+				<li><a href="/logout">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="content">
+	<h1>Entertainment Point!</h1>
+	<h3 id="heading">Search for Your Favorite Movies and TV Shows</h3>
+	<form action="/home" method="POST">
+		<input type="text" name="name" placeholder="Movie, TV Show, Anime etc." id="search" class="form-group">
+		<input type="text" name="omdbId" placeholder="OMDb ID" id="search" class="form-group">
+		<button id="search">Search</button>
+	</form>
+</div>
+
+<% include partials/footer %>

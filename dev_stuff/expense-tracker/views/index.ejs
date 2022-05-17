@@ -1,0 +1,91 @@
+<% include partials/header %>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<div class="container-fluid">
+		<div class="navbar-header mr-auto">
+			<a class="navbar-brand" href="/dashboard">Personal Money Tracker</a>
+		</div>
+		<div class="misc">
+			<ul class="nav navbar-nav navbar-right">
+				<li>Welcome <%= user.username %>!</li>
+				<li><a href="/logout">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container"> 
+	<div class="heading">
+		<h1>Your Personal Money Tracker!</h1>
+		<h5>Leave all the tracking to us . . . Just kick back and relax!</h5>
+	</div>
+
+	<hr>
+	<img src="/money.png">
+	<img src="/clothe.png">
+	<img src="/women.png">
+	<img src="/car.png">
+	<img src="/food.png">
+
+	<hr>
+
+	<h5>Total Expenditure</h5>
+	<% items.forEach(function(items) { %>
+		<% if(items.author.username === user.username) { %>
+			<% totalExpense += parseInt(items.price) %>
+		<% } %>
+	<% }) %>
+	<h5>Rs.<%= totalExpense %>/-</h5>
+
+	<hr>
+
+	<div class="row">
+		<div class="col-sm-3">
+			<p>Item Name</p>
+		</div>
+		<div class="col-sm-3">
+			<p>Price</p>
+		</div>
+		<div class="col-sm-3">
+			<p>Description</p>
+		</div>
+		<div class="col-sm-3">
+			<p>Delete</p>
+		</div>
+	</div>
+
+	<hr>
+
+	<% items.forEach(function(items) { %>
+		<% if(items.author.username === user.username) { %>
+			<div class="row">
+				<div class="col-sm-3">
+					<p><%= items.name %></p>
+				</div>
+				<div class="col-sm-3">
+					<p><%= items.price %></p>
+				</div>
+				<div class="col-sm-3">
+					<p><%= items.description %></p>
+				</div>
+				<div class="col-sm-3">
+					<form action="/dashboard/<%= items._id %>?_method=DELETE" method="POST">
+						<button class="btn btn-lg btn-danger">Delete</button>
+					</form>
+				</div>
+			</div>
+			<hr>
+		<% } %>
+	<% }); %>
+
+	<br>
+	<div style="text-align: center">
+		<a href="/dashboard/new" class="btn btn-lg btn-default" id="navbarField">Add New Item</a>
+	</div>
+</div>
+
+<% include partials/footer %>
+
+
+		
+	

@@ -1,0 +1,128 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url("https://wallpaperaccess.com/full/2166.jpg"); 
+	background-size: contain;
+}
+
+.box {
+	margin-left: 7%;
+	padding: 40px;
+	width: 60%;
+	height: 100%;
+	color: #b5d1ff;
+	margin-top: 5%;
+	text-align: center;
+	font-family: 'Permanent Marker', cursive;
+}
+
+.container {
+	text-align: center;
+}
+
+#login {
+	border-radius: 5px;
+	width: 60%;
+	padding-left: 10px;
+	border: 2px solid #787878;
+}
+
+.content {
+	width: 90%;
+	margin-left: 5%;
+	color: #b5d1ff;
+	padding: 1%;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	height: 100%;
+	font-family: 'Permanent Marker', cursive;
+	/*background-color: rgba(99, 126, 224, 0.5);*/
+}
+
+#search {
+	width: 30%;
+	margin-left: 3%;
+	border: 2px solid #787878;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+
+#heading {
+	margin-left: 3%;
+	padding-bottom: 1%;
+}
+
+.action {
+	text-align: center;
+	padding-top: 30%;
+}
+
+h1 {
+	text-align: center;
+	padding-bottom: 10%;
+	font-family: 'Permanent Marker', cursive;
+	color: black;
+	text-shadow: 0 0 5px #ffffff, 0 0 10px #000000 ,0 0 20px #ff9538, 0 0 25px #ff9538, 0 0 30px #f5b642, 0 0 35px #f5b642;
+}
+
+p {
+	color: #c8cbcf;
+}
+
+.actions {
+	margin: 10%;
+}
+
+.row {
+	text-align: center;
+}
+
+hr {
+	color: white;
+}
+
+#poster {
+	width: 100%;
+}
+
+.misc {
+	font-family: 'Permanent Marker', cursive;
+}
+
+#hidden {
+	visibility: hidden;
+}
+
+h5 {
+	font-family: 'Permanent Marker', cursive;
+	text-align: left;
+	color: black;
+	text-shadow: 0 0 5px #ffffff, 0 0 10px #000000 ,0 0 20px #ff9538, 0 0 25px #ff9538, 0 0 30px #f5b642, 0 0 35px #f5b642;
+}
+
+li {
+	text-align: left;
+}
+
+.trailer {
+	text-align: center;
+	text-shadow: 0 0 5px #ffffff, 0 0 10px #000000 ,0 0 20px #ff9538, 0 0 25px #ff9538, 0 0 30px #f5b642, 0 0 35px #f5b642;
+}
+
+#frame {
+	width: 500px;
+	height: 375px;
+}
+
+.trailerHead {
+	text-align: center;
+	padding-bottom: 1%;
+	color: black;
+	text-shadow: 0 0 5px #ffffff, 0 0 10px #000000 ,0 0 20px #ff9538, 0 0 25px #ff9538, 0 0 30px #f5b642, 0 0 35px #f5b642;
+}
+
+
+
+
+
+

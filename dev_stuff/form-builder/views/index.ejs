@@ -1,0 +1,36 @@
+<% include partials/header %>
+
+<div class="box">
+	<h6>Welcome <%=user.username %>!</h6>
+	<h3>Create Your Form</h3>
+	<img src="/newform.png" onclick="location.href='/form/new'" id="formpic">
+
+	<hr>
+
+	<h3>Want to Fill a Form?</h3>
+	<% f.forEach(function(forms) { %>
+		<% if(forms.author == user.username) { %>
+			<p><img src="/form.png" id="formpic" onclick="location.href='/form/fill/<%= forms._id %>'"><br><%= forms.title %></p>
+		<% } %>
+	<% }); %>
+
+	<hr>
+
+	<h3>View Submissions</h3>
+	<% f.forEach(function(forms) { %>
+		<% if(forms.author == user.username) { %>
+			<p><img src="/form.png" id="formpic" onclick="location.href='/form/submissions/<%= forms._id %>'"><br><%= forms.title %><br>
+				<form action="/form/delete/<%= forms._id %>?_method=DELETE" method="POST">
+					<button id="delete">Delete</button>
+				</form>
+			</p>
+		<% } %>
+	<% }); %>
+
+	<hr>
+
+	<button onclick="location.href='/logout'">Sign Out</button>
+</div>
+
+<% include partials/footer %>
+
