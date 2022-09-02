@@ -1,4 +1,4 @@
-# MiniProjects
+# DUMP
 
 A collection of mini-projects and notes. 
 
