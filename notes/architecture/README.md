@@ -143,3 +143,93 @@ Note:
 - Dynamic groups allow the above resource principals to be grouped as principal actors.
 - Memberships are dyanmic rather than static and are added by matching rules because they are created and destroyed in the comartment. 
 - `allow dynamic-group InstanceA to manage objects in tenancy where any {target.bucket.name = 'logs', target.region.name = 'regionA'}`
+
+---
+
+## Networking - Virtual Cloud Network
+
+### Introduction
+
+- Virtual representation of a physical newtork.
+- It resides in a single region.
+- Consists of subnets, routers (gateways), firewalls, route tables etc.
+- Internet gateway grants access to internet to access public subnet nad vice versa.
+- Internet cannot access private subnet.
+- Private subnet can access internet via NAT gateway.
+- Service gateway allows private subnet to access other Oracle resources.
+
+### CIDR Notation
+
+- Classless Inter Domain Routing
+- `A.B.C.D/x`
+- Each letter is a single byte (8 bits)
+- `A.B.C.D` is the network address
+- `/x` is the network prefix or mask
+
+### RFC - 1918
+
+- Standard used to assign IPv4 addresses in the VCN.
+- Some IP addresses are reserved for the private subnet and aren't accessible via the public internet directly (only via firewalls, bastion servers etc.). 
+- They are assigned to internal hosts inside the private network.
+- First two and last IP address (broadcast) in CIDR notation are reserved.
+
+### Introduction to Subnets
+
+- VCN spans all the ADs within a region.
+- Subnets can be AD specific or span a region as well (recommended).
+- Subnets cannot overlap, they are contiguous.
+- VNIC (Virtual Network Interface Card) decides how instances connect with endpoints inside and outside the VCN.
+- Types of subnets:
+    - Private subnets will have only private IPs
+    - Public subnets can have private and public IPs
+
+### Security Lists
+
+- Refers to firewall rules associated with a subnet and is applied to the instances that are launched from within the subnet.
+- Allows us to define stateful or stateless rules.
+- It is applied at the VNIC level.
+- Consists of rules that specifies the traffic allowed in and out of the subnet.
+- Associated with the subnet during or after creation.
+- Pinging can be enabled.
+- **Stateful**: ingress or egress is defined, the other is left alone.
+- **Stateless**: in and out has to be defined.
+
+### Network Security Groups
+
+- Provides a virtual firewall for a set of cloud of resources. 
+- They apply ontly to a set of VNICs of our choice in a single VCN.
+- NSG is recommended because it let's us separate the VCNs architecture from an applications security requirements.
+- NSGs allow you to describe another NSG as a source or destination, while SLs expect CIDR blocks.
+
+### Bastion
+
+- Bastion serves as a jump box from public to private subnet.
+- OCI Bastion service provides ephemeral access to the target resources in a secure and time bound manner.
+- It is tracked and audited by Event and Audit service. 
+- Allows access to specified IPv4 addresses.
+- Free, integrated with IAM.
+- Anything that works with SSH, can work with OCI Bastion.
+
+### Internet Gateway
+
+- Optional virtual router that connects the VCN to the internet.
+- Supports connections initiated form within the VCN and from the internet.
+- Needs to have a public IP.
+- Requires the subnet to have a route table specifying the gateway as the target.
+
+### NAT Gateway
+
+- Network Address Translation Gateway
+- Instances in a private subnet don't have a public IP address. 
+- This allows the whole private network to have a public IP address for OUTBOUND traffic, inbound traffic isn't allowed.
+- Each NAT gateway can accommodate upto 20,000 connections.
+
+### Service Gateway
+
+- Provides a secure path to the ONS (Oracle Network Service) without leaving the OCI. 
+- These services have a public IP address.
+- We don't need to be on OCI to access the services.
+- We can access it via the internet.
+- ONS hosts object storage, ADW etc. 
+
+### Local Peering Gateway
