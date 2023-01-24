@@ -25,5 +25,5 @@ Cloud scalability is horizontal scalability.
 ## Implementing Microservices using Spring
 DTO: data transfer object
 DAO: data access object (collection of multiple DTOs)
-## Microservices Design Patters
 
+## Microservices Design Patters

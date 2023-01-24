@@ -11,8 +11,3 @@ Deals with the creation of structured data from unstructured data. It extracts a
 It's a matrix factorization technique. 
 
 ![SVD](https://editor.analyticsvidhya.com/uploads/82407SVD.png)
-
-A: document term matrix - m documents and n unique words, frequencies at A[i, j]
-
-U:
-
