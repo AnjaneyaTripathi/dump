@@ -27,12 +27,4 @@ A collection of mini-projects and notes.
 | Pneumonia Detector | Given an X-Ray of the lung section, the model can classify whether the patient suffers from pneumonia or not. | May 2020 |
 | Neural Network (Scratch) | Creating a neural network from scratch. | Jun 2020 |
 | Fuzzy Logic | Implemented a Car Braking System using Mamdani Fuzzy Logic in MATLAB and Python | Sept 2021 |
-
-
-## Notes
-
-- NLP
-- Java
-- Docker
-- Microservices
-- Velero Backup
+| Food Reviews | Training a BERT model for food reviews dataset provided by Amazon | Mar 2021 |
